@@ -36,8 +36,8 @@
     </declare-styleable>
 
     <declare-styleable name="ImageText">
-        <attr name="text"/>
-        <attr name="src"/>
+        <attr name="android:text"/>
+        <attr name="android:src"/>
         <attr name="image_width" format="dimension|reference"/>
     </declare-styleable>
 

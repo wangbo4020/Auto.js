@@ -3,14 +3,14 @@ package org.autojs.autojs.pluginclient;
 
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 
 import java.io.StringReader;
-
-import javax.annotation.Nullable;
 
 import io.reactivex.Observable;
 import io.reactivex.subjects.PublishSubject;
@@ -63,7 +63,7 @@ public class JsonWebSocket extends WebSocketListener {
         return mJsonElementPublishSubject;
     }
 
-    public Observable<Bytes> bytes(){
+    public Observable<Bytes> bytes() {
         return mBytesPublishSubject;
     }
 

@@ -4,7 +4,6 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion versions.compile
-    buildToolsVersion versions.buildTool
 
     defaultConfig {
         applicationId "com.stardust.auojs.inrt"
@@ -97,22 +96,13 @@ tasks.whenTaskAdded { task ->
     }
 }
 
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-    google()
-}
+repositories { flatDir { dirs 'libs' } }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.1-alpha01', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //Glide
-    implementation('com.github.bumptech.glide:glide:4.2.0', {
-        exclude group: 'com.android.support'
-    })
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
     testImplementation 'junit:junit:4.12'
     implementation project(':automator')
     implementation project(':common')

@@ -36,10 +36,10 @@ class ImageText : LinearLayout {
             return
         }
         val a = context.obtainStyledAttributes(attrs, R.styleable.ImageText)
-        a.getString(R.styleable.ImageText_text)?.let {
+        a.getString(R.styleable.ImageText_android_text)?.let {
             textView.text = it
         }
-        val iconResId = a.getResourceId(R.styleable.ImageText_src, 0)
+        val iconResId = a.getResourceId(R.styleable.ImageText_android_src, 0)
         if (iconResId != 0) {
             imageView.setImageResource(iconResId)
         }

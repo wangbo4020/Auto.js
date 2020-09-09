@@ -15,7 +15,6 @@ import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
 import com.evernote.android.job.JobRequest
 import com.flurry.android.FlurryAgent
-import com.squareup.leakcanary.LeakCanary
 import com.stardust.app.GlobalAppContext
 import com.stardust.autojs.core.ui.inflater.ImageLoader
 import com.stardust.autojs.core.ui.inflater.util.Drawables
@@ -69,11 +68,11 @@ class App : MultiDexApplication() {
 
         crashHandler.setBuglyHandler(Thread.getDefaultUncaughtExceptionHandler())
         Thread.setDefaultUncaughtExceptionHandler(crashHandler)
-        if (LeakCanary.isInAnalyzerProcess(this)) {
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
             // This process is dedicated to LeakCanary for heap analysis.
             // You should not init your app in this process.
-            return
-        }
+//            return
+//        }
         //LeakCanary.install(this);
 
     }

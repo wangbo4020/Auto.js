@@ -27,7 +27,6 @@
 
 
     <application
-        xmlns:tools="http://schemas.android.com/tools"
         android:name=".App"
         android:allowBackup="false"
         android:icon="@drawable/autojs_material"
@@ -127,9 +126,9 @@
             </intent-filter>
         </activity>
 
-        <activity
+        <!--<activity
             android:name=".ui.error.IssueReporterActivity"
-            android:theme="@style/IssueReporterTheme"/>
+            android:theme="@style/IssueReporterTheme"/>-->
 
 
         <service android:name=".external.foreground.ForegroundService"/>

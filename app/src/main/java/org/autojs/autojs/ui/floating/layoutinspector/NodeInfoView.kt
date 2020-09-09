@@ -21,7 +21,7 @@ import java.lang.reflect.Field
  * Created by Stardust on 2017/3/10.
  */
 
-class NodeInfoView : RecyclerView {
+open class NodeInfoView : RecyclerView {
 
     private val mData = Array(FIELDS.size + 1) { Array(2) { "" } }
 
